@@ -1,326 +1,400 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Walmart</title>
     <style>
-        :root{
-            --blue: #004f9a;
-            --blue-secondary: #0a0d4bff;
-            --gray:#46474a;
-            --dark:#2e2f32;
-            --light: #e6f1fc;
-            
-        }
-        html,body {
-            font-family: Helvetica,Arial sans-serif;
-            max-width: 800px;
-            width: 800px;
-            display: block;
-            margin:auto;
-            border: var(--light) 7px solid;
-            
-        
-        }
-         .section{
-            margin:1rem 2rem;
-        } 
-        a{
-            
-            color:black
-        }
-        .small, .payment-info{
-            font-size: 0.8;
-            color:var(--gray);
-        }
-        .small-name,.payment-info_head {
-            font-weight: 600;
-            color: var(--dark)
-        }
-        .logo{
-            width:15rem;
-            display: flex;
-            margin: auto;
-            justify-content:center ;
-            align-items: center;
-            padding:10px;
-        }
-        .info {
-            color:var(--gray);
-            margin:.3rem 0;
-            font-size: 0.8rem;
-        }
-        .title {
-            color:var(--blue);
-            font-weight: 200;
-            
-        }
-        .button{
-            background-color: var(--blue-secondary);
-            color: white;
-            text-decoration: none;
-            margin: 0 1rem ;
-            padding: .5rem 1.3rem;
-            border-radius: 25px;
-        }
-        .section-title {
-            color:var(--blue);
-            font-weight: 200;
-            font-size: 2rem;
-            border-top: var(--light) 2px solid;
-            padding: 2rem 0 0 0;
-            margin: 2rem 0 0 0;
-            max-width: 45rem;
-        }
-        .review {
-            font-size: 0.8rem;
-        }
-        .rating{
-            display: flex;
-            position: relative;
-            padding-bottom: 2rem;
-        }
-        .stars {
-            position:absolute;
-            z-index: 20;
-            top: -5rem
-        }
-        .rating-right {
-            position: absolute;
-            left: 35rem;
-            top:1rem;   
-        }
-        .item-card {
-            display: flex;
-            position: relative;
-        }
-        .item-info{
-            color:var(--gray)
-        }
-        .item-name {
-            font-weight: 500;
-            color: black;
-            width: 30rem;
-        }
-        .item-price {
-            position: absolute;
-            bottom: 5rem;
-            left:40rem;
-            
-        }
-        .item-price,.promo-item_price{
-            font-weight: 600;
-        }
-        .card {
-            display: flex;
-            color:var(--gray)
-        }
-        .savings{
-            background-color: white;
-            color: black;
-            border: 1px solid black;
-            text-decoration: none;
-            margin: 1rem ;
-            padding: .5rem 1.3rem;
-            border-radius: 25px;
-        }
-        .promo{
-            display: flex;
-            padding-bottom: 2rem;
-            justify-content: center;
-        }
-        .promo-item {
-            width: 200px;
-        }
-        .promo-item-info {
-            margin-left: 2rem;
-        }
-        .promo-item_price {
-            margin: 0;
-            font-size: 1rem;
-        }
-        .promo-item_info {
-            margin: 0.2rem 0 0 0;
-           font-size: 0.8rem;
-        }
-        .footer-images{
-            display: flex;
-        }
-        
-        .icon {
-            width:2rem;
-            padding: 0 .2rem 0 .5rem;
-        }
-        .footer{
-            display: flex;
+      :root {
+        --blue: #004f9a;
+        --blue-secondary: #0a0d4bff;
+        --gray: #46474a;
+        --dark: #2e2f32;
+        --light: #e6f1fc;
+      }
+      html,
+      body {
+        font-family: Helvetica, Arial sans-serif;
+        max-width: 800px;
+        width: 800px;
+        display: block;
+        margin: auto;
+        border: var(--light) 7px solid;
+      }
+      .section {
+        margin: 1rem 2rem;
+      }
+      a {
+        color: black;
+      }
+      .small,
+      .payment-info {
+        font-size: 0.8;
+        color: var(--gray);
+      }
+      .small-name,
+      .payment-info_head {
+        font-weight: 600;
+        color: var(--dark);
+      }
+      .logo {
+        width: 15rem;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+      }
+      .info {
+        color: var(--gray);
+        margin: 0.3rem 0;
+        font-size: 0.8rem;
+      }
+      .title {
+        color: var(--blue);
+        font-weight: 200;
+      }
+      .button {
+        background-color: var(--blue-secondary);
+        color: white;
+        text-decoration: none;
+        margin: 0 1rem;
+        padding: 0.5rem 1.3rem;
+        border-radius: 25px;
+      }
+      .section-title {
+        color: var(--blue);
+        font-weight: 200;
+        font-size: 2rem;
+        border-top: var(--light) 2px solid;
+        padding: 2rem 0 0 0;
+        margin: 2rem 0 0 0;
+        max-width: 45rem;
+      }
+      .review {
+        font-size: 0.8rem;
+      }
+      .rating {
+        display: flex;
+        position: relative;
+        padding-bottom: 2rem;
+      }
+      .stars {
+        position: absolute;
+        z-index: 20;
+        top: -5rem;
+      }
+      .rating-right {
+        position: absolute;
+        left: 35rem;
+        top: 1rem;
+      }
+      .item-card {
+        display: flex;
+        position: relative;
+      }
+      .item-info {
+        color: var(--gray);
+      }
+      .item-name {
+        font-weight: 500;
+        color: black;
+        width: 30rem;
+      }
+      .item-price {
+        position: absolute;
+        bottom: 5rem;
+        left: 40rem;
+      }
+      .item-price,
+      .promo-item_price {
+        font-weight: 600;
+      }
+      .card {
+        display: flex;
+        color: var(--gray);
+      }
+      .savings {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+        text-decoration: none;
+        margin: 1rem;
+        padding: 0.5rem 1.3rem;
+        border-radius: 25px;
+      }
+      .promo {
+        display: flex;
+        padding-bottom: 2rem;
+        justify-content: center;
+      }
+      .promo-item {
+        width: 200px;
+      }
+      .promo-item-info {
+        margin-left: 2rem;
+      }
+      .promo-item_price {
+        margin: 0;
+        font-size: 1rem;
+      }
+      .promo-item_info {
+        margin: 0.2rem 0 0 0;
+        font-size: 0.8rem;
+      }
+      .footer-images {
+        display: flex;
+      }
 
-        }
-        .footer-right{
-            padding: 0 2rem;
-        }
-        .footer_privacy{
-            color:var(--gray);
-            font-size: 0.8rem;
-        }
-
-        
+      .icon {
+        width: 2rem;
+        padding: 0 0.2rem 0 0.5rem;
+      }
+      .footer {
+        display: flex;
+      }
+      .footer-right {
+        padding: 0 2rem;
+      }
+      .footer_privacy {
+        color: var(--gray);
+        font-size: 0.8rem;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <table>
-        <tr >
-            <img class="logo " src="./img/brand/R.png" alt="walmart" >
-        </tr>
-        <!-- HEAD -->
-        <tr class="section">
-            <td class="section">
-                <div class="section">
-                 <p class="info">Order Date: Sat, Jul 27, 2024</p>
-                <p class="info">Order number: 2000187-62430034</p>
-                <h1 class="title">Your Order has been recieved, Chris!</h1>
-                <a href="" class="button"> View order</a>   
-                </div>
-                
-            </td>
-        </tr>
-        <!-- RATING -->
-        <tr>
-            <td>
-                <div class="section">
-                     <h2 class="section-title" style="font-size: 1rem;">How was your experience?</h2>
-            <p class="review">Your feed is valuable! We'd love to hear your thoughts</p>
+      <tr>
+        <img class="logo" src="./img/brand/R.png" alt="walmart" />
+      </tr>
+      <!-- HEAD -->
+      <tr class="section">
+        <td class="section">
+          <div class="section">
+            <p class="info">Order Date: Sat, Jul 27, 2024</p>
+            <p class="info">Order number: 2000187-62430034</p>
+            <h1 class="title">Your Order has been recieved, Chris!</h1>
+            <a href="" class="button"> View order</a>
+          </div>
+        </td>
+      </tr>
+      <!-- RATING -->
+      <tr>
+        <td>
+          <div class="section">
+            <h2 class="section-title" style="font-size: 1rem">
+              How was your experience?
+            </h2>
+            <p class="review">
+              Your feed is valuable! We'd love to hear your thoughts
+            </p>
             <div class="rating">
-                <div class="rating-left">
-                    <img class="stars" src="./img/446618-200.png" alt="stars">
-                    
+              <div class="rating-left">
+                <img class="stars" src="./img/446618-200.png" alt="stars" />
+              </div>
+              <div class="rating-right">
+                <a href="">Give feedback</a>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <!-- RECIEPT -->
+      <tr>
+        <td>
+          <div class="section">
+            <h3 class="section-title" style="padding-bottom: 1rem">1 item</h3>
+            <div class="item">
+              <small class="small">
+                Sold and shipped by
+                <span class="small-name">Armani Exchange</span></small
+              >
+              <div class="item-card">
+                <img
+                  style="width: 6.25rem; padding-right: 2rem"
+                  src="./img/118238-0419-30.png"
+                  alt="rolex"
+                />
+                <div class="item-info">
+                  <p class="item-name">
+                    18K Gold Rolex President-Date 18038 Diamond watch Green Dial
+                    15.11 CT
+                  </p>
+                  <p>$32,995.95/EA</p>
+                  <p>Qty: 1</p>
                 </div>
-                <div class="rating-right">
-                    <a href="">Give feedback</a>
+                <div class="item-price">$32,995.95</div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <!--- PAYMENT -->
+      <tr>
+        <td>
+          <div class="section">
+            <h2 class="section-title">Payment method</h2>
+            <div class="card">
+              <img
+                style="width: 3rem"
+                src="./img/mastercard_PNG24.png"
+                alt="card-type"
+              />
+              <p style="padding-left: 1rem">MasterCard ending in 3829</p>
+            </div>
+            <p class="payment-info" style="width: 40rem">
+              <span class="payment-info_head"
+                >Your payment method has been charged for the final total.</span
+              >
+              Your bank should remove any tempory holds within 10 business days.
+              <a href="#">Learn more</a>
+            </p>
+          </div>
+        </td>
+      </tr>
+      <!-- SUGGESTIONS -->
+      <tr>
+        <td>
+          <div class="section">
+            <h2 class="section-title">Your might also like</h2>
+            <div class="promo">
+              <div class="promo-item">
+                <img
+                  style="width: 10rem"
+                  src="./img/(JA)-V45-MB-SC-DT-OG.png"
+                  alt="frank muller"
+                />
+                <div class="promo-item-info">
+                  <p class="promo-item_price">$6,925.00</p>
+                  <p class="promo-item_info">
+                    Frank Muller Conquistador Grand Prix Titanium Yellow Diamond
+                  </p>
                 </div>
-            </div>    
+              </div>
+              <div class="promo-item">
+                <img
+                  style="width: 10rem"
+                  src="./img/742010380-seiko-presage-sary078-1000x1000.png"
+                  alt="gran seiko"
+                />
+                <div class="promo-item-info">
+                  <p class="promo-item_price">$20,923.80</p>
+                  <p class="promo-item_info">
+                    Seiko Presage Elegance collection Watch 18K 9S64 Hand-wound
+                    Men's
+                  </p>
                 </div>
-           
-            </td>
-        </tr>
-        <!-- RECIEPT -->
-        <tr>
-            <td>
-                <div class="section">
-                    <h3 class="section-title" style="padding-bottom: 1rem;"> 1 item</h3>
-                <div class="item">
-                <small class="small"> Sold and shipped by <span class="small-name">Armani Exchange</span></small>
-                <div class="item-card">
-                    <img style="width:6.25rem; padding-right: 2rem;" src="./img/118238-0419-30.png" alt="rolex">
-                    <div class="item-info">
-                        <p class="item-name">18K Gold Rolex President-Date 18038 Diamond watch Green Dial 15.11 CT </p>
-                        <p>$32,995.95/EA</p>
-                        <p>Qty: 1</p>
-                    </div>
-                    <div class="item-price">
-                        $32,995.95
-                    </div>
-                </div>    
+              </div>
+              <div class="promo-item">
+                <img
+                  style="width: 6.2rem; margin-left: 1.3rem"
+                  src="./img/10-106462_rolex-png.png"
+                  alt="rolex"
+                />
+                <div class="promo-item-info">
+                  <p class="promo-item_price">$16,999.00</p>
+                  <p class="promo-item_info">
+                    Rolex Datjust 36mm 18k/Steel Watch Jubilee Arabic Numeral
+                    Iced 13 CT
+                  </p>
                 </div>
+              </div>
+            </div>
+            <a href="" class="savings"> Explore more savings</a>
+          </div>
+        </td>
+      </tr>
+      <!-- PROMOTIONAL BANNER -->
+      <tr>
+        <td>
+          <a href="#"
+            ><img
+              class="promo"
+              style="
+                width: 49.3rem;
+                padding-top: 2rem;
+                border-bottom: var(--dark) 3px solid;
+              "
+              src="./img/brand/promo-banner.png"
+              alt="promo banner"
+          /></a>
+        </td>
+      </tr>
+      <!-- FOOTER -->
+      <tr>
+        <td>
+          <div class="section">
+            <span class="section-title"></span>
+            <div class="footer">
+              <div class="footer-left">
+                <p>Shop anywhere with the app</p>
+                <div class="footer-images">
+                  <img
+                    style="width: 10rem"
+                    src="./img/footer/logo-play-store.png"
+                    alt=""
+                    class="android"
+                  />
+                  <img
+                    style="width: 10rem"
+                    src="./img/footer/App-Store-Badge.png"
+                    alt=""
+                    class="apple"
+                  />
                 </div>
-                
-                
-            </td>
-        </tr>
-        <!--- PAYMENT -->
-        <tr>            
-            <td>
-                <div class="section">
-                    <h2 class="section-title">Payment method</h2>
-                <div class="card">
-                    <img style="width:3rem;" src="./img/mastercard_PNG24.png" alt="card-type">
-                    <p style="padding-left: 1rem;">MasterCard ending in 3829</p>
+              </div>
+              <div class="footer-right">
+                <p>
+                  <span style="font-weight: 600">Questions?</span> Visit our
+                  <a href="#"> Help Center</a>
+                </p>
+                <div class="social">
+                  <a href="#">
+                    <img
+                      style="width: 2rem"
+                      src="./img/footer/1690643640twitter-x-icon-png.webp"
+                      alt="twitter"
+                      class="icon"
+                  /></a>
+                  <a href="#">
+                    <img
+                      style="width: 2rem"
+                      src="./img/footer/pinterest-1-logo-black-and-white.png"
+                      alt="pintrest"
+                      class="icon"
+                  /></a>
+                  <a href="#">
+                    <img src="./img/footer/OIP.jpg" alt="facebook" class="icon"
+                  /></a>
+                  <a href="#">
+                    <img
+                      src="./img/footer/youtube-dark-circle.png"
+                      alt="youtube"
+                      class="icon"
+                  /></a>
+                  <a href="#">
+                    <img src="./img/footer/R.png" alt="instagram" class="icon"
+                  /></a>
                 </div>
-                <p class="payment-info" style="width:40rem;"><span class="payment-info_head">Your payment method has been charged for the final total.</span> Your bank should remove any tempory holds within 10 business days. <a href="#">Learn more</a></p>
-                </div>
-                
-            </td>
-        </tr>
-        <!-- SUGGESTIONS -->
-        <tr>
-            <td>
-                <div class="section">
-                    <h2 class="section-title">Your might also like</h2>
-                <div class="promo">
-                    <div class="promo-item">
-                        <img style="width: 10rem;" src="./img/(JA)-V45-MB-SC-DT-OG.png" alt="frank muller">
-                        <div class="promo-item-info">
-                          <p class="promo-item_price">$6,925.00</p>
-                        <p class="promo-item_info">Frank Muller Conquistador Grand Prix Titanium Yellow Diamond</p>  
-                        </div>
-                        
-                    </div>
-                    <div class="promo-item">
-                        <img style="width: 10rem;" src="./img/742010380-seiko-presage-sary078-1000x1000.png" alt="gran seiko">
-                        <div class="promo-item-info">
-                          <p class="promo-item_price">$20,923.80</p>
-                        <p class="promo-item_info">Seiko Presage Elegance collection Watch 18K 9S64 Hand-wound Men's </p>  
-                        </div>
-                        
-                    </div>
-                    <div class="promo-item">
-                        <img style="width: 6.2rem; margin-left:1.3rem;" src="./img/10-106462_rolex-png.png" alt="rolex">
-                        <div class="promo-item-info">
-                          <p class="promo-item_price">$16,999.00</p>
-                        <p class="promo-item_info">Rolex Datjust 36mm 18k/Steel Watch Jubilee Arabic Numeral Iced 13 CT</p>  
-                        </div>
-                        
-                    </div>
-                    
-                </div>
-                <a href="" class="savings"> Explore more savings</a>
-                </div>
-                
-            </td>
-        </tr>
-        <!-- PROMOTIONAL BANNER -->
-        <tr >
-            <td>
-               <a href="#"><img class="promo" style=" width: 49.3rem; padding-top: 2rem; border-bottom: var(--dark) 3px solid;"src="./img/brand/promo-banner.png" alt="promo banner"/></a> 
-            </td>
-        </tr>
-        <!-- FOOTER -->
-        <tr>
-            <td >
-                <div class="section">
-                    <span class="section-title"></span>
-                    <div class="footer">
-                    <div class="footer-left">
-                        <p>Shop anywhere with with the app</p>
-                        <div class="footer-images">
-                            <img style="width:10rem" src="./img/footer/logo-play-store.png" alt="" class="android">
-                            <img style="width:10rem" src="./img/footer/App-Store-Badge.png" alt="" class="apple">
-                        </div>
-                    </div>
-                    <div class="footer-right">
-                        <p><span style="font-weight: 600;">Questions?</span> Visit our <a href="#"> Help Center</a></p>
-                        <div class="social">
-                            <a href="#">
-                            <img style="width:2rem;" src="./img/footer/1690643640twitter-x-icon-png.webp" alt="twitter" class="icon"></a>
-                            <a href="#">
-                            <img style="width:2rem;" src="./img/footer/pinterest-1-logo-black-and-white.png" alt="pintrest" class="icon"></a>
-                            <a href="#">
-                            <img  src="./img/footer/OIP.jpg" alt="facebook" class="icon"></a>
-                            <a href="#">
-                            <img src="./img/footer/youtube-dark-circle.png" alt="youtube" class="icon"></a>
-                            <a href="#">
-                            <img src="./img/footer/R.png" alt="instagram" class="icon"></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer_privacy">
-                    <p>Walmart protects your security and privacy. We will never ask for personal information (such as passwords or credit card numbers) in an email. If you recieve such a request, please do not respond. <a href="#">Learn more</a> about online safety and see our <a href="#">Privacy Policy</a>.</p>
-                    <p>- Please do not reply to this email. This mailbox is not monitored.</p>
-                    <p> © 2024 Walmart. All rights reserved</p></div>
-                </div>
-               
-            </td>
-        </tr>
+              </div>
+            </div>
+            <div class="footer_privacy">
+              <p>
+                Walmart protects your security and privacy. We will never ask
+                for personal information (such as passwords or credit card
+                numbers) in an email. If you recieve such a request, please do
+                not respond. <a href="#">Learn more</a> about online safety and
+                see our <a href="#">Privacy Policy</a>.
+              </p>
+              <p>
+                - Please do not reply to this email. This mailbox is not
+                monitored.
+              </p>
+              <p>© 2024 Walmart. All rights reserved</p>
+            </div>
+          </div>
+        </td>
+      </tr>
     </table>
-</body>
+  </body>
 </html>
