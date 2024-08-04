@@ -12,11 +12,14 @@
         --dark: #2e2f32;
         --light: #e6f1fc;
       }
-      html,
+      
+      /* Desktop */
+      @media only screen and (min-width: 960px) {
+        html,
       body {
         font-family: Helvetica, Arial sans-serif;
         max-width: 800px;
-        width: 800px;
+        /* width: 50rem; */
         display: block;
         margin: auto;
         border: var(--light) 7px solid;
@@ -31,6 +34,9 @@
       .payment-info {
         font-size: 0.8;
         color: var(--gray);
+      }
+      .payment-info_card {
+        width: 40rem;
       }
       .small-name,
       .payment-info_head {
@@ -142,6 +148,11 @@
         margin: 0.2rem 0 0 0;
         font-size: 0.8rem;
       }
+      .promo-banner {
+        width: 49.3rem;
+                padding-top: 2rem;
+                border-bottom: var(--dark) 3px solid;
+      }
       .footer-images {
         display: flex;
       }
@@ -160,10 +171,360 @@
         color: var(--gray);
         font-size: 0.8rem;
       }
+
+      }
+
+      /* Mid-Sizes */
+      @media only screen and (max-width: 960px) {
+        html,
+      body {
+        font-family: Helvetica, Arial sans-serif;
+        max-width: 800px;
+        /* width: 50rem; */
+        display: block;
+        margin: auto;
+        border: var(--light) 7px solid;
+      }
+      .section {
+        margin: 1rem 2rem;
+      }
+      a {
+        color: black;
+      }
+      .small,
+      .payment-info {
+        font-size: 0.8;
+        color: var(--gray);
+      }
+      .payment-info {
+        width:45rem;
+      }
+      .small-name,
+      .payment-info_head {
+        font-weight: 600;
+        color: var(--dark);
+      }
+     
+      .logo {
+        width: 15rem;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+      }
+      .info {
+        color: var(--gray);
+        margin: 0.3rem 0;
+        font-size: 0.8rem;
+      }
+      .title {
+        color: var(--blue);
+        font-weight: 200;
+      }
+      .button {
+        background-color: var(--blue-secondary);
+        color: white;
+        text-decoration: none;
+        margin: 0 1rem;
+        padding: 0.5rem 1.3rem;
+        border-radius: 25px;
+      }
+      .section-title {
+        color: var(--blue);
+        font-weight: 200;
+        font-size: 2rem;
+        border-top: var(--light) 2px solid;
+        padding: 2rem 0 0 0;
+        margin: 2rem 0 0 0;
+        max-width: 45rem;
+      }
+      .review {
+        font-size: 0.8rem;
+      }
+      .rating {
+        display: flex;
+        position: relative;
+        padding-bottom: 2rem;
+      }
+      .stars {
+        position: absolute;
+        z-index: 20;
+        top: -5rem;
+      }
+      .rating-right {
+        position: absolute;
+        left: 35rem;
+        top: 1rem;
+      }
+      .item-card {
+        display: flex;
+        position: relative;
+      }
+      .item-info {
+        color: var(--gray);
+      }
+      .item-name {
+        font-weight: 500;
+        color: black;
+        width: 30rem;
+      }
+      .item-price {
+        position: absolute;
+        bottom: 5rem;
+        left: 40rem;
+      }
+      .item-price,
+      .promo-item_price {
+        font-weight: 600;
+      }
+     
+      .card {
+        display: flex;
+        color: var(--gray);
+      }
+      .savings {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+        text-decoration: none;
+        margin: 1rem;
+        padding: 0.5rem 1.3rem;
+        border-radius: 25px;
+      }
+      .promo {
+        display: flex;
+        padding-bottom: 2rem;
+        justify-content:space-evenly;
+      }
+     
+      .promo-item {
+        width: 200px;
+        /* margin: auto; */
+      }
+      .promo-item-info {
+        margin-left: 2rem;
+      }
+      .promo-item_price {
+        margin: 0;
+        font-size: 1rem;
+      }
+      .promo-item_info {
+        margin: 0.2rem 0 0 0;
+        font-size: 0.8rem;
+      }
+      .promo-banner {
+        width: 46.2rem;
+        
+      }
+      .footer-images {
+        display: flex;
+      }
+
+      .icon {
+        width: 2rem;
+        padding: 0 0.2rem 0 0.5rem;
+      }
+      .footer {
+        display: flex;
+      }
+      .footer-right {
+        padding: 0 2rem;
+      }
+      .footer_privacy {
+        color: var(--gray);
+        font-size: 0.8rem;
+        width: 45rem;
+      }
+
+      }
+
+      /* Mobile */
+      @media only screen and (max-width: 600px) {
+        html,
+      body {
+        font-family: Helvetica, Arial sans-serif;
+        max-width: 400px;
+        /* width:100%; */
+        display: block;
+        margin: auto;
+        border: var(--light) 7px solid;
+        justify-content: center;
+      }
+      table {
+        width: 100%;
+      }
+      .section {
+        margin: 0.5rem 1rem; 
+  
+      }
+      a {
+        color: black;
+      }
+      .small,
+      .payment-info {
+        font-size: 0.8rem;
+        color: var(--gray);
+      }
+      .payment-info_card {
+        width: 19.5rem;
+      }
+      .small-name,
+      .payment-info_head {
+        font-weight: 600;
+        color: var(--dark);
+      }
+      .logo {
+        width: 10rem;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+      }
+      .info {
+        color: var(--gray);
+        margin: 0.3rem 0;
+        font-size: 0.8rem;
+      }
+      .title {
+        color: var(--blue);
+        font-weight: 200;
+        max-width: 20rem;
+        font-size: 1rem;
+        padding-bottom: 1rem;
+      }
+      .button {
+        background-color: var(--blue-secondary);
+        color: white;
+        text-decoration: none;
+        margin: 0 1rem;
+        padding: 0.5rem 1.3rem;
+        border-radius: 25px;
+        font-size: 1rem;
+      }
+      .section-title {
+        color: var(--blue);
+        font-weight: 200;
+        font-size: 2rem;
+        border-top: var(--light) 2px solid;
+        padding: 2rem 0 0 0;
+        margin: 2rem 0 0 0;
+        max-width: 45rem;
+        width: 20rem;
+      }
+      .review {
+        font-size: 0.8rem;
+      }
+      .rating {
+        display: flex;
+        position: relative;
+        padding-bottom: 2rem;
+      }
+      .stars {
+        position: absolute;
+        z-index: 20;
+        top: -5rem;
+      }
+      .rating-right {
+        position: absolute;
+        left: 14rem;
+        top: 1rem;
+      }
+      .item-card {
+        display: flex;
+        position: relative;
+      }
+      .item-info {
+        color: var(--gray);
+      }
+      .item-name {
+        font-weight: 500;
+        color: black;
+        width: 11rem;
+      }
+      .item-price {
+        position: absolute;
+        top: 11rem;
+        left: 1rem;
+      }
+      .item-price,
+      .promo-item_price {
+        font-weight: 600;
+      }
+      .card {
+        display: flex;
+        color: var(--gray);
+      }
+      .savings {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+        text-decoration: none;
+        margin: 1rem;
+        padding: 0.5rem 1.3rem;
+        border-radius: 25px;
+      }
+      .promo {
+        display:block;
+        width: 20rem;
+        justify-content: center;
+        /* margin: auto; */
+      }
+      .promo-item {
+        width: 9rem;
+        margin: auto;
+        padding-top: 1rem;
+      }
+      .promo-item-info {
+        margin: auto;
+      }
+      .promo-item_price {
+        margin: 0;
+        font-size: 1rem;
+      }
+      .promo-item_info {
+        margin: 0.2rem 0 0 0;
+        font-size: 0.8rem;
+      }
+      .promo-banner {
+        width: 21rem;
+                padding-top: 2rem;
+                margin: auto;
+      }
+      .footer-images {
+        display: flex;
+      }
+
+      .icon {
+        width: 2rem;
+        padding: 0 0.2rem 0 0.5rem;
+      }
+      .shop {
+        border-top: var(--dark) 3px solid;
+        padding-top: 2rem;
+      }
+      .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+      }
+      .footer-right {
+        padding: 0 2rem;
+      }
+      .footer_privacy {
+        color: var(--gray);
+        font-size: 0.8rem;
+        width: 20rem;
+      }
+
+      }
+      
     </style>
   </head>
   <body>
-    <table>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" >
       <tr>
         <img class="logo" src="./img/brand/R.png" alt="walmart" />
       </tr>
@@ -242,7 +603,7 @@
               />
               <p style="padding-left: 1rem">MasterCard ending in 3829</p>
             </div>
-            <p class="payment-info" style="width: 40rem">
+            <p class="payment-info payment-info_card" >
               <span class="payment-info_head"
                 >Your payment method has been charged for the final total.</span
               >
@@ -257,7 +618,7 @@
         <td>
           <div class="section">
             <h2 class="section-title">Your might also like</h2>
-            <div class="promo">
+            <div class="promo promo-suggestion">
               <div class="promo-item">
                 <img
                   style="width: 10rem"
@@ -309,12 +670,8 @@
         <td>
           <a href="#"
             ><img
-              class="promo"
-              style="
-                width: 49.3rem;
-                padding-top: 2rem;
-                border-bottom: var(--dark) 3px solid;
-              "
+              class="promo promo-banner"
+              
               src="./img/brand/promo-banner.png"
               alt="promo banner"
           /></a>
@@ -327,7 +684,7 @@
             <span class="section-title"></span>
             <div class="footer">
               <div class="footer-left">
-                <p>Shop anywhere with the app</p>
+                <p class="shop">Shop anywhere with the app</p>
                 <div class="footer-images">
                   <img
                     style="width: 10rem"
